@@ -1,6 +1,6 @@
 {
   "name": "tilelive-arcgis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tilelive.js adapter for ArcGIS tile caches",
   "license": "MIT",
   "repository": {
