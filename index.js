@@ -100,18 +100,19 @@ ArcTilelive.prototype._init = function(filetype, callback) {
 };
 
 ArcTilelive.prototype.getTile = function(z, x, y, callback) {
+    var me = this;
     this.tiler.getTile(x,y,z,function(error, tile) {
         if (error) {
             callback(error);
             return;
         }
         var headers = {};
-        if (!this.filetype) {
-            this.filetype = tiletype.type(tile.data);
+        if (!me.filetype) {
+            me.filetype = tiletype.type(tile.data);
         }
         headers['Last-Modified'] = new Date(tile.lastModified).toUTCString();
         headers['ETag'] = tile.data.length + '-' + Number(tile.lastModified);
-        headers['Content-Type'] = 'image/'+this.filetype
+        headers['Content-Type'] = 'image/'+me.filetype
         return callback(null, tile.data, headers);
     });
 };
@@ -122,10 +123,11 @@ ArcTilelive.prototype.getGrid = function(z, x, y, callback) {
 
 ArcTilelive.prototype.getInfo = function(callback) {
     var filename = 'Conf.xml';
+    var me = this;
     fs.readFile(path.join(this.basepath, filename), function(err, data) {
         if (err) {
             filename = 'conf.xml'
-            fs.readFile(path.join(this.basepath, filename), function(err, data) {
+            fs.readFile(path.join(me.basepath, filename), function(err, data) {
                 if (err) return callback(err);
 
                 callback(null, {
