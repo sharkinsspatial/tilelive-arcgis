@@ -26,7 +26,7 @@ npm install tilelive-arcgis
 ##Tilelive Protocol
 
 ```javascript
-arcgis://path/to/tiles?filetype=png|jpg
+arcgis://path/to/tiles?filetype=png
 ```
 
 ## Usage
