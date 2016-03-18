@@ -10,17 +10,17 @@ It is readonly currently and can't be used to generate ArcGIS tile caches.
 
 There are 2 implemetations:
 
-tilelive-arcgis.File is for the exploded tile format used by ArcGIS 9.3.1 and before.
+**tilelive-arcgis.File** is for the exploded tile format used by ArcGIS 9.3.1 and before.
 
-tilelive-arcgis.Bundle is for compact tiles format since ESRI ArcGIS 10.0
+**tilelive-arcgis.Bundle** is for compact tiles format since ESRI ArcGIS 10.0
+
+**PLEASE NOTICE**: this library is not available for the improved compact format introduced in ArcGIS 10.3, and we are working on the upgrade. 
+
+## ArcGIS Compact Tile
 
 [ArcGIS Compact Tile](https://server.arcgis.com/zh-cn/server/latest/publish-services/windows/inside-the-compact-cache-storage-format.htm) is a tile format since ArcGIS version 10.
 
 It bundles exploded tile files into a .bundlx and a .bundle file and really reduces number of tile files.
-
-This library is a reader for the bundles.
-
-PLEASE NOTICE: this library is not available for the improved compact format introduced in ArcGIS 10.3, and we are working on the upgrade. 
 
 ## Install
 
