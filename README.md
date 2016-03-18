@@ -34,10 +34,11 @@ var url = 'arcgis://path/to/tiles?filetype=jpg'
 ## Usage
 
 ```javascript
+var fs = require('fs');
 var Arcgis = require('tileive-arcgis');
 
 //root folder of the tiles, where the Conf.xml stands
-new Arcgis('arcgis://path/to/arcgis-tiles', function(err, source) {
+new Arcgis('arcgis://./test/sample/bundle', function(err, source) {
     if (err) throw err;
     source.getTile(2, 0xd50, 0x971, function(err, tile, headers) {
         if (err) throw err;
