@@ -28,7 +28,7 @@ npm install tilelive-arcgis
 ```javascript
 // filetype is an optional parameter, default is 'png'.
 // It is only useful for exploded tiles in other formats besides png 
-var url = 'arcgis://path/to/tiles?filetype=png'
+var url = 'arcgis://path/to/tiles?filetype=jpg'
 ```
 
 ## Usage
