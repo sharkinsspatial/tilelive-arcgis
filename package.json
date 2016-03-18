@@ -9,11 +9,15 @@
   },
   "main": "index.js",
   "scripts": {
-    "test" : "node test/test.js"  
+    "test": "./node_modules/.bin/mocha"
   },
-  "dependencies": {    
-      "tiler-arcgis-bundle" : "^0.2.0",
-      "tiler-arcgis-file" : "^0.1.0"
+  "dependencies": {
+    "tiler-arcgis-bundle": "^0.1.0",
+    "tiler-arcgis-file": "^0.1.2",
+    "tiletype": "^0.3.0"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
 }
