@@ -58,7 +58,7 @@ describe('reading arcgis tilesources', function() {
 
     it('should get file-based tilesource\'s conf.xml with getInfo',function(done) {
         var confpath = __dirname+'/sample/file/conf.xml';
-        new BundleSource('./test/sample/file', function(err, source) {
+        new FileSource('./test/sample/file', function(err, source) {
             if (err) return done(err);
             source.getInfo(function(err, info) {
                 if (err) return done(err);
