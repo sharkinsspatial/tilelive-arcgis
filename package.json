@@ -1,7 +1,7 @@
 {
   "name": "tilelive-arcgis",
   "version": "0.1.0",
-  "description": "A tilelive.js adapter for reading from tile cache of ArcGIS",
+  "description": "A tilelive.js adapter for ArcGIS tile caches",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,9 +12,10 @@
     "test": "./node_modules/.bin/mocha"
   },
   "dependencies": {
-    "tiler-arcgis-bundle": "^0.1.0",
+    "tiler-arcgis-bundle": "^0.2.0",
     "tiler-arcgis-file": "^0.1.2",
-    "tiletype": "^0.3.0"
+    "tiletype": "^0.3.0",
+    "xmldom": "^0.1.22"
   },
   "readmeFilename": "README.md",
   "devDependencies": {

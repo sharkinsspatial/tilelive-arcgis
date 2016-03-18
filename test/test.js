@@ -1,16 +1,12 @@
-var arcgis = require('../');
+var Arcgis = require('../');
 var assert = require('assert');
 var fs = require('fs');
-
-var FileSource = arcgis.File;
-var BundleSource = arcgis.Bundle;
-
 
 describe('reading arcgis tilesources', function() {
 
     it('should retrieve a tile from file-based source correctly', function(done) {
         var tilepath = __dirname+'/sample/file/_alllayers/L02/R00000971/C00000d50.png';
-        new FileSource('./test/sample/file', function(err, source) {
+        new Arcgis('arcgis://./test/sample/file', function(err, source) {
             if (err) return done(err);
             source.getTile(2, 0xd50, 0x971, function(err, tile, headers) {
                 if (err) return done(err);
@@ -28,7 +24,7 @@ describe('reading arcgis tilesources', function() {
     it('should retrieve a tile from bundle-based source correctly', function(done) {
         var tilepath = __dirname+'/sample/bundle/tile.png';
         var bundlepath = __dirname+'/sample/bundle/_alllayers/L02/R0900C0d00.bundle';
-        new BundleSource('./test/sample/bundle', function(err, source) {
+        new Arcgis('arcgis://./test/sample/bundle', function(err, source) {
             if (err) return done(err);
             source.getTile(2, 0xd50, 0x971, function(err, tile, headers) {
                 if (err) return done(err);
@@ -45,7 +41,7 @@ describe('reading arcgis tilesources', function() {
 
     it('should get bundle-based tilesource\'s conf.xml with getInfo',function(done) {
         var confpath = __dirname+'/sample/bundle/Conf.xml';
-        new BundleSource('./test/sample/bundle', function(err, source) {
+        new Arcgis('arcgis://./test/sample/bundle', function(err, source) {
             if (err) return done(err);
             source.getInfo(function(err, info) {
                 if (err) return done(err);
@@ -58,7 +54,7 @@ describe('reading arcgis tilesources', function() {
 
     it('should get file-based tilesource\'s conf.xml with getInfo',function(done) {
         var confpath = __dirname+'/sample/file/conf.xml';
-        new FileSource('./test/sample/file', function(err, source) {
+        new Arcgis('arcgis://./test/sample/file', function(err, source) {
             if (err) return done(err);
             source.getInfo(function(err, info) {
                 if (err) return done(err);
