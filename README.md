@@ -16,7 +16,7 @@ There are 2 implemetations:
 
 **PLEASE NOTICE**: this library is not available for the improved compact format introduced in ArcGIS 10.3, and we are working on the upgrade. 
 
-## ArcGIS Compact Tile
+### ArcGIS Compact Tile
 
 [ArcGIS Compact Tile](https://server.arcgis.com/zh-cn/server/latest/publish-services/windows/inside-the-compact-cache-storage-format.htm) is a tile format since ArcGIS version 10.
 
