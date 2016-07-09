@@ -1,7 +1,7 @@
 # tilelive-arcgis
 A tilelive.js adapter for reading from tile storage cache of ArcGIS
 
-[![Circle CI](https://circleci.com/gh/FuZhenn/tilelive-arcgis.svg?style=svg)](https://circleci.com/gh/FuZhenn/tilelive-arcgis)
+[![Circle CI](https://circleci.com/gh/fuzhenn/tilelive-arcgis.svg?style=svg)](https://circleci.com/gh/fuzhenn/tilelive-arcgis)
 
 ## Introduction
 This is a [tilelive](http://github.com/mapbox/tilelive) adapter from tile storage cache of ESRI ArcGIS.
