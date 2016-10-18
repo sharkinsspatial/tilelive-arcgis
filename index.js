@@ -158,7 +158,14 @@ ArcTilelive.prototype.putInfo = function(info, callback) {
 };
 
 ArcTilelive.prototype.putTile = function(z, x, y, tile, callback) {
-    callback(null);
+    var me = this;
+    this.tiler.putTile(x, y, z, tile, function(error) {
+        if (error) {
+            callback(error);
+            return;
+        }
+        callback(null);
+    });
 };
 
 ArcTilelive.prototype.putGrid = function(z, x, y, grid, callback) {
